@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CripsNGooey · crispiest cheese fries Malaysia</title>
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fff7e6;  /* soft creamy background */
+      font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+      color: #2e1b0e;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    /* header / brand */
+    .brand {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .brand h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #b45f2b, #e67e22, #f7b731);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .brand .tagline {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #4a2c1a;
+      background: #faeac9;
+      display: inline-block;
+      padding: 0.4rem 2rem;
+      border-radius: 40px;
+      margin-top: 0.3rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+    }
+
+    /* hero description */
+    .hero-desc {
+      background: #ffffffd9;
+      backdrop-filter: blur(4px);
+      padding: 2rem 2rem;
+      border-radius: 2.5rem;
+      margin: 2rem 0 3rem 0;
+      box-shadow: 0 20px 30px -10px rgba(172, 102, 28, 0.2);
+      border: 1px solid #ffd89a;
+    }
+
+    .hero-desc p {
+      font-size: 1.3rem;
+      max-width: 850px;
+      margin: 0 auto 1rem auto;
+      text-align: center;
+    }
+
+    .hero-desc .emphasis {
+      font-weight: 700;
+      color: #b84c1c;
+      background: #fff0d4;
+      padding: 0.2rem 0.6rem;
+      border-radius: 12px;
+    }
+
+    .hero-desc .quote {
+      font-style: italic;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #6b3f1f;
+      border-left: 6px solid #f39c12;
+      padding-left: 1.5rem;
+      max-width: 750px;
+      margin: 1.8rem auto 0 auto;
+    }
+
+    /* product images — two variations */
+    .product-showcase {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2.5rem;
+      margin: 3rem 0 3.5rem;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 2rem;
+      padding: 1.8rem 1.5rem 1.8rem 1.5rem;
+      box-shadow: 0 20px 25px -8px rgba(110, 60, 20, 0.25);
+      flex: 1 1 280px;
+      max-width: 380px;
+      transition: 0.2s ease-in-out;
+      border: 2px solid #fdd48d;
+      text-align: center;
+    }
+
+    .product-card:hover {
+      transform: scale(1.02);
+      border-color: #e67e22;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 1.5rem;
+      background: #f5e1c0;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+      border: 3px solid #ffe8c7;
+    }
+
+    .product-card h3 {
+      font-size: 2rem;
+      margin: 1rem 0 0.4rem;
+      font-weight: 700;
+      color: #2d1c0e;
+    }
+
+    .product-card p {
+      font-size: 1.1rem;
+      color: #79553a;
+      background: #fff6e9;
+      padding: 0.3rem 1rem;
+      border-radius: 30px;
+      display: inline-block;
+    }
+
+    /* cta / contact strip */
+    .contact-links {
+      background: #2e1b0e;
+      color: white;
+      border-radius: 5rem;
+      padding: 1.3rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem 3rem;
+      margin: 3rem 0 2rem;
+    }
+
+    .contact-links a {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: #4f3822;
+      padding: 0.6rem 1.8rem;
+      border-radius: 3rem;
+      transition: 0.15s;
+      border: 1px solid #d4a15d;
+    }
+
+    .contact-links a i {
+      font-size: 2rem;
+    }
+
+    .contact-links a:hover {
+      background: #c97f2b;
+      color: #1f1309;
+      border-color: #ffc107;
+      transform: scale(1.05);
+    }
+
+    .whatsapp-large {
+      background: #25D366 !important;
+      border: none;
+      font-size: 1.6rem;
+    }
+    .whatsapp-large i {
+      font-size: 2.2rem;
+    }
+
+    .social-row {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .social-btn {
+      background: #faeac9;
+      padding: 0.8rem 2rem;
+      border-radius: 50px;
+      color: #3b2516;
+      font-size: 1.3rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: 2px solid #dba870;
+      transition: all 0.15s;
+    }
+
+    .social-btn i {
+      font-size: 1.8rem;
+    }
+
+    .social-btn:hover {
+      background: #e6b15c;
+      color: #0e0804;
+      border-color: #ab601a;
+    }
+
+    /* location / footer */
+    .footer-note {
+      text-align: center;
+      margin-top: 4rem;
+      font-size: 1.2rem;
+      color: #674421;
+    }
+
+    .footer-note span {
+      font-weight: 700;
+      background: #ffeec9;
+      padding: 0.2rem 1rem;
+      border-radius: 50px;
+    }
+
+    hr {
+      border: 1px dashed #dcb185;
+      margin: 1.5rem 0;
+    }
+
+    /* local image handling: from local windows paths we display placeholders + note */
+    .local-img-warning {
+      font-size: 0.9rem;
+      background: #fcf0dd;
+      padding: 0.2rem 1rem;
+      border-radius: 30px;
+      color: #8b5e2e;
+      margin-top: 0.5rem;
+      border: 1px dashed #c1985b;
+    }
+
+    /* mobile fine-tune */
+    @media (max-width: 600px) {
+      .brand h1 { font-size: 2.8rem; }
+      .hero-desc p { font-size: 1.1rem; }
+      .contact-links a { font-size: 1.2rem; padding: 0.5rem 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <!-- header -->
+    <div class="brand">
+      <h1>CripsNGooey</h1>
+      <div class="tagline">crispiest · cheesiest · loaded fries</div>
+    </div>
+
+    <!-- main description (your words) -->
+    <div class="hero-desc">
+      <p>
+        <span class="emphasis">CripsNGooey</span> is officially bringing the <strong>Crispiest & gooey cheese fries</strong> and the best fries that all can have. 
+        These aren’t just your ordinary fries — it’s the best fries that you can get in Malaysia. 
+        Juicy beef with BBQ sauce that’s very finger licking, and the cheesiest cheese you can get.
+      </p>
+      <p>
+        Every bite offers a satisfyingly crispy fry, fully loaded with toppings. 
+        Whether you enjoy them exactly as they are or decide to melt some cheese on top to mellow out the fire, 
+        these fries are the ultimate way to satisfy your cravings.
+      </p>
+      <div class="quote">
+        “You can find your next favorite fries at CripsNGooey.”
+      </div>
+    </div>
+
+    <!-- two product variations (local images from your paths) 
+         Because the images are on your local drive, we show them as img src with your absolute paths.
+         For web accessibility, they will only display if the files exist at that exact location.
+         A friendly note explains how to make them visible. -->
+    <div class="product-showcase">
+      <!-- variation 1 -->
+      <div class="product-card">
+        <img src="WhatsApp Image 2026-03-15 at 10.43.34" 
+             alt="Crispy BBQ beef cheese fries - variation 1"
+             onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22300%22%20height%3D%22300%22%20viewBox%3D%220%200%20300%20300%22%3E%3Crect%20width%3D%22300%22%20height%3D%22300%22%20fill%3D%22%23f7d9aa%22%2F%3E%3Ctext%20x%3D%2230%22%20y%3D%22160%22%20font-family%3D%22Arial%22%20font-size%3D%2218%22%20fill%3D%22%236b4c2c%22%3E🍟 Variation 1%3C%2Ftext%3E%3Ctext%20x%3D%2230%22%20y%3D%22190%22%20font-family%3D%22Arial%22%20font-size%3D%2214%22%20fill%3D%22%239f6e42%22%3ECrispy%20%26%20Gooey%3C%2Ftext%3E%3C%2Fsvg%3E';">
+        <h3>🔥 Signature BBQ</h3>
+        <p>juicy beef · extra cheese</p>
+        <div class="local-img-warning">
+          <i class="fa-regular fa-image"></i> local: 10.43.34.jpeg
+        </div>
+      </div>
+
+      <!-- variation 2 -->
+      <div class="product-card">
+        <img src="WhatsApp Image 2026-03-15 at 10.43.35" 
+             alt="Loaded cheese fries with BBQ sauce - variation 2"
+             onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22300%22%20height%3D%22300%22%20viewBox%3D%220%200%20300%20300%22%3E%3Crect%20width%3D%22300%22%20height%3D%22300%22%20fill%3D%22%23f5d1a2%22%2F%3E%3Ctext%20x%3D%2230%22%20y%3D%22160%22%20font-family%3D%22Arial%22%20font-size%3D%2218%22%20fill%3D%22%235f3f24%22%3E🧀 Variation 2%3C%2Ftext%3E%3Ctext%20x%3D%2230%22%20y%3D%22190%22%20font-family%3D%22Arial%22%20font-size%3D%2214%22%20fill%3D%22%23945f30%22%3Egooey%20cheese%20%26%20beef%3C%2Ftext%3E%3C%2Fsvg%3E';">
+        <h3>🧀 Double Gooey</h3>
+        <p>extra cheese · bbq drizzle</p>
+        <div class="local-img-warning">
+          <i class="fa-regular fa-image"></i> local: 10.43.35.jpeg
+        </div>
+      </div>
+    </div>
+
+    <!-- Note about local images (friendly) -->
+    <p style="text-align: center; max-width:650px; margin:0 auto 2rem; background: #fff4de; padding:0.8rem; border-radius: 60px;">
+      <i class="fa-regular fa-folder-open" style="margin-right: 0.5rem;"></i> 
+      The two product photos above are loaded from your local files. 
+      If they don't appear, please check the paths: <code style="background:#fae2b5; padding:0.2rem 0.5rem; border-radius:12px;">C:\Users\thema\OneDrive\Documents\...</code>
+    </p>
+
+    <!-- WhatsApp direct (main number) + social media links -->
+    <div class="contact-links">
+      <a href="https://wa.me/601161353451" target="_blank" class="whatsapp-large">
+        <i class="fab fa-whatsapp"></i> 011-61353451
+      </a>
+    </div>
+
+    <!-- facebook & instagram row using the exact URLs -->
+    <div class="social-row">
+      <a href="https://www.facebook.com/share/18XXL3SKB7/" target="_blank" class="social-btn">
+        <i class="fab fa-facebook-f"></i> Facebook
+      </a>
+      <a href="https://www.instagram.com/cripsngooey?igsh=aWdtNzJsMDhxbDRk" target="_blank" class="social-btn">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+      <!-- extra WhatsApp icon for fast contact (small) -->
+      <a href="https://wa.me/601161353451" target="_blank" class="social-btn" style="background:#25D366; color:white; border-color:#1da85c;">
+        <i class="fab fa-whatsapp"></i> Chat now
+      </a>
+    </div>
+
+    <!-- a little business info reinforcement -->
+    <hr>
+    <div class="footer-note">
+      <span>📍 Malaysia · crispy gooey since 2026</span>
+      <p style="font-size: 1rem; margin-top: 1rem; color:#553b23;">
+        <i class="fa-regular fa-thumbs-up"></i> Finger licking BBQ beef · loaded cheese · best fries in Malaysia
+      </p>
+      <p style="font-size: 1.1rem; margin: 0.5rem 0;">
+        <i class="fa-regular fa-clock"></i> Open everyday · order via WhatsApp
+      </p>
+      <p style="font-size: 0.95rem; color: #75563b;">CripsNGooey — your next favourite fries</p>
+    </div>
+  </div>
+
+  <!-- tiny script to improve file path readability (nothing changes) -->
+  <script>
+    (function() {
+      // just to make sure the onerror placeholder works if images not found
+      console.log("CripsNGooey website loaded – local images paths: C:\\Users\\thema\\OneDrive\\Documents\\ ...");
+    })();
+  </script>
+</body>
+</html>
